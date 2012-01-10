@@ -115,9 +115,6 @@ class ProductController extends Controller
         if (!$entity) {
             throw $this->createNotFoundException('Unable to find Product entity.');
         }
-        $entity->addTags(new \Khepin\ProductBundle\Entity\Tag());
-        $entity->addTags(new \Khepin\ProductBundle\Entity\Tag());
-        $entity->addTags(new \Khepin\ProductBundle\Entity\Tag());
 
         $editForm = $this->createForm(new ProductType(), $entity);
         $deleteForm = $this->createDeleteForm($id);

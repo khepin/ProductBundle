@@ -90,7 +90,7 @@ class Product
         return $this->tags;
     }
     
-    public function setTags(\Doctrine\Common\Collections\ArrayCollection $tags){
+    public function setTags($tags){
         $this->tags = $tags;
         foreach ($tags as $tag){
             $tag->setProduct($this);

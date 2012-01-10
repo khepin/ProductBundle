@@ -1,0 +1,18 @@
+<script>
+    function add() {
+        var collectionHolder = $('#khepin_productbundle_producttype_tags');
+        var prototype = collectionHolder.attr('data-prototype');
+        form = prototype.replace(/\$\$name\$\$/g, collectionHolder.children().length);
+        form =  $(form).filter('div').first().html($(form).html() +'<a class="delete_link" href="#">remove</a>');
+        collectionHolder.append(form);
+    }
+    
+    $('a.jslink').click(function(event){
+        event.preventDefault();
+        add();
+    });
+    
+    $(document).on('click', 'a.delete_link',function(event){
+        $(event.currentTarget).parent().remove();
+    });
+</script>

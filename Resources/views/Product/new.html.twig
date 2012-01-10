@@ -21,17 +21,5 @@
         </a>
     </li>
 </ul>
-<script>
-    function add() {
-        var collectionHolder = $('#khepin_productbundle_producttype_tags');
-        var prototype = collectionHolder.attr('data-prototype');
-        form = prototype.replace(/\$\$name\$\$/g, collectionHolder.children().length);
-        collectionHolder.append(form);
-    }
-    
-    $('a.jslink').live('click', function(event){
-        event.preventDefault();
-        add();
-    });
-</script>
+{% include "KhepinProductBundle:Product:js.html.twig" %}
 {% endblock %}

@@ -14,6 +14,7 @@ class ProductType extends AbstractType
                 ->add('tags', 'collection', array(
                     'type' => new TagType(), 
                     'allow_add' => true,
+                    'allow_delete' => true,
                     'by_reference' => false,
                     ))
         ;
